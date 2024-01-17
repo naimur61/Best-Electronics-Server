@@ -12,7 +12,7 @@ const musicTrackSchema = new Schema<IMusicTrack>(
 			required: true,
 		},
 		musicUrl: {
-			type: URL,
+			type: String,
 			required: true,
 		},
 	},
@@ -21,4 +21,4 @@ const musicTrackSchema = new Schema<IMusicTrack>(
 	}
 );
 
-export const MusicTrack = model<IMusicTrack, MusicTrackModel>("AcademicSemester", musicTrackSchema);
+export const MusicTrack = model<IMusicTrack, MusicTrackModel>("MusicTrack", musicTrackSchema);
