@@ -14,6 +14,7 @@ const musicTrackSchema = new Schema<IMusicTrack>(
 		musicUrl: {
 			type: String,
 			required: true,
+			unique: true,
 		},
 	},
 	{
