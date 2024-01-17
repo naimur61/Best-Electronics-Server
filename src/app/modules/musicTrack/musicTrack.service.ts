@@ -2,17 +2,20 @@ import httpStatus from "http-status";
 import { SortOrder } from "mongoose";
 import { IMusicTrack } from "./musicTrack.interface";
 import { MusicTrack } from "./musicTrack.model";
+import { ApiError } from "../../../errors/ApiError";
 
 const createMusicTrackToDB = async (payload: IMusicTrack) => {
 	const result = await MusicTrack.create(payload);
 	if (!result) {
-		throw new Error("Failed to create user!");
-		//  httpStatus.EXPECTATION_FAILED,
+		throw new ApiError(httpStatus.EXPECTATION_FAILED, "Failed to create user!");
 	}
 	return result;
 };
 
-// const getSemestersFromDB = async (
+const getMusicTrackFromDB = async () => {
+	console.log("object");
+};
+// const getMusicTrackFromDB = async (
 //   filters: IAcademicSemesterFilter,
 //   paginationOptions: IPaginationOptions,
 // ): Promise<IGenericResponse<IAcademicSemester[]>> => {
@@ -64,38 +67,7 @@ const createMusicTrackToDB = async (payload: IMusicTrack) => {
 //   };
 // };
 
-// const updateSemesterToDB = async (
-//   id: string,
-//   payload: Partial<IAcademicSemester>,
-// ): Promise<IAcademicSemester | null> => {
-//   if (
-//     payload.code &&
-//     payload.title &&
-//     academicSemesterTitleCodeMapper[payload.title] !== payload.code
-//   ) {
-//     throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid semester code!');
-//   }
-
-//   const result = await AcademicSemester.findOneAndUpdate({ _id: id }, payload, {
-//     new: true,
-//   });
-
-//   return result;
-// };
-
-// const deleteSemesterFromDB = async (
-//   id: string,
-// ): Promise<IAcademicSemester | null> => {
-//   const result = await AcademicSemester.findByIdAndDelete(id);
-
-//   return result;
-// };
-
 export const MusicTrackService = {
 	createMusicTrackToDB,
-	//   getSemestersFromDB,
-	//   getSingleSemesterFromBD,
-	//   updateSemesterToDB,
-	//   deleteSemesterFromDB,
+	getMusicTrackFromDB,
 };
-//

@@ -21,6 +21,9 @@ const createMusicTrack: RequestHandler = catchAsync(async (req, res) => {
 		data: result,
 	});
 });
+const getAllMusicTracks: RequestHandler = catchAsync(async (req, res) => {
+	console.log("object");
+});
 
 // const getAllMusicTracks: RequestHandler = catchAsync(async (req, res) => {
 //   const filters = pick(req.query, academicMusicTrackFilterableFields);
@@ -67,10 +70,7 @@ const createMusicTrack: RequestHandler = catchAsync(async (req, res) => {
 //   });
 // });
 
-export const AcademicMusicTrackController = {
+export const MusicTrackController = {
 	createMusicTrack,
-	//   getAllMusicTracks,
-	//   getSingleMusicTrack,
-	//   updateMusicTrack,
-	//   deleteMusicTrack,
+	getAllMusicTracks,
 };
