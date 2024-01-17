@@ -8,3 +8,10 @@ export type IMusicTrack = {
 };
 
 export type MusicTrackModel = Model<IMusicTrack>;
+
+export type IMusicTrackFilter = {
+	searchTerm?: string;
+	title?: string;
+	artist?: string;
+	year?: string;
+};
