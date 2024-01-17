@@ -11,6 +11,10 @@ const musicTrackSchema = new Schema<IMusicTrack>(
 			type: String,
 			required: true,
 		},
+		category: {
+			type: String,
+			required: true,
+		},
 		musicUrl: {
 			type: String,
 			required: true,
