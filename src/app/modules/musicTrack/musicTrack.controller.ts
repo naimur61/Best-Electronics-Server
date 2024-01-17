@@ -11,16 +11,14 @@ import httpStatus from "http-status";
 const createMusicTrack: RequestHandler = catchAsync(async (req, res) => {
 	const { ...musicTrackData } = req.body;
 
-	console.log(musicTrackData, "Hit");
-	//   const result =
-	//     await AcademicMusicTrackService.createMusicTrackToDB(academicMusicTrackData);
+	const result = await MusicTrackService.createMusicTrackToDB(musicTrackData);
 
-	//   sendResponse(res, {
-	//     statuscode: httpStatus.OK,
-	//     success: true,
-	//     message: 'MusicTrack successfully created!',
-	//     data: result,
-	//   });
+	sendResponse(res, {
+		statuscode: httpStatus.OK,
+		success: true,
+		message: "MusicTrack successfully created!",
+		data: result,
+	});
 });
 
 // const getAllMusicTracks: RequestHandler = catchAsync(async (req, res) => {
