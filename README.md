@@ -4,7 +4,7 @@ This API provides endpoints to manage music tracks.
 
 ## Server Live Link
 
-The API is hosted on [ https://playstation-server.onrender.com](https://playstation-server.onrender.com).
+The API is hosted on [ Live Server ](https://playstation-server.onrender.com).
 
 ## Getting Data
 
@@ -15,8 +15,6 @@ Retrieve a list of music tracks.
 #### Request
 
 ```bash
-curl https://playstation-server.onrender.com
-
 
 <!--
 
