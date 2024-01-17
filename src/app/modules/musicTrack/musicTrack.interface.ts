@@ -1,3 +1,4 @@
+import { Model } from "mongoose";
 import { URL } from "url";
 
 export type IMusicTrack = {
@@ -5,3 +6,5 @@ export type IMusicTrack = {
 	artist: string;
 	musicUrl: URL;
 };
+
+export type MusicTrackModel = Model<IMusicTrack>;
