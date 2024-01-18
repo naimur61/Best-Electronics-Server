@@ -12,13 +12,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/api/v1/", router);
+
 app.use("/", (req: Request, res: Response) => {
 	res.status(httpStatus.NOT_FOUND).json({
 		success: true,
 		message: "Welcome to Music Track Server!",
 	});
 });
-app.use("/api/v1/", router);
 
 app.use(globalErrorHandler);
 
