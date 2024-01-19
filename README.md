@@ -10,6 +10,26 @@ The API is hosted on [ Live Server ](https://playstation-server.onrender.com).
 
 This Node.js backend serves as the server-side component for the MusicTrack application. It handles the creation and retrieval of music tracks.
 
+## Install dependencies:
+
+- **Method:** `yarn add / npm install`
+  yarn add / npm install
+
+## Configuration
+
+Create a .env file in the project root and set the following environment variables:
+
+- **Method:** `  
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string`
+
+Replace your_mongodb_connection_string with the actual connection string for your MongoDB instance.
+
+Running the Server
+
+- **Method:** `yarn start / npm start`
+  The server will start on http://localhost:5000.
+
 ## API Endpoints
 
 ### Create Music Track
