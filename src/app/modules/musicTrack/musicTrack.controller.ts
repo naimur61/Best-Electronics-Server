@@ -30,7 +30,7 @@ const getAllMusicTracks: RequestHandler = catchAsync(async (req, res) => {
 	sendResponse<IMusicTrack[]>(res, {
 		statuscode: httpStatus.OK,
 		success: true,
-		message: "MusicTracks retrieved successful!",
+		message: "Music Tracks retrieved successful!",
 		meta: result.meta,
 		data: result.data,
 	});
