@@ -6,16 +6,6 @@ This API provides endpoints to manage music tracks.
 
 The API is hosted on [ Live Server ](https://playstation-server.onrender.com).
 
-## Getting Data
-
-### GET /tracks
-
-Retrieve a list of music tracks.
-
-#### Request
-
-# MusicTrack Backend
-
 ## Overview
 
 This Node.js backend serves as the server-side component for the MusicTrack application. It handles the creation and retrieval of music tracks.
@@ -36,19 +26,21 @@ This Node.js backend serves as the server-side component for the MusicTrack appl
   }
   ```
 
-```bash
+### GET Music Track
 
-<!--
+Retrieve a list of music tracks.
 
-     <!--  for Development -->
+- **Endpoint:** `http://localhost:5000/api/v1/music`
+- **Method:** `GET`
+- **Request Query:**
 
-    "start": "ts-node-dev --respawn --transpile-only src/server.ts",
+  ```
+  searchTerm : string(Title, artist, category)
+  ```
 
+Page & Limit will be Number.
 
-    <!-- for Production -->
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "start": "node dist/server.js",
-    "build": "tsc",
+```
 
-    -->
+- **GET Example:** `: http://localhost:5000/api/v1/music/?searchTerm=text&page=1&limit=10`
 ```
