@@ -7,10 +7,11 @@ const createMusicTrackZodSchema = zod_1.z.object({
         title: zod_1.z.string({
             required_error: "Title is required",
         }),
-        artist: zod_1.z.string({ required_error: "Year is required" }),
+        artist: zod_1.z.string({ required_error: "Artist is required" }),
+        category: zod_1.z.string({ required_error: "Category is required" }),
         musicUrl: zod_1.z
             .string({
-            required_error: "Code is required",
+            required_error: "Url is required",
         })
             .url(),
     }),
